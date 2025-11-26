@@ -1,0 +1,13 @@
+[build]
+  base = "site-web"
+  command = "cd site-web && npm install && npm run build"
+  publish = "site-web/dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "site-web/netlify/functions"
+
