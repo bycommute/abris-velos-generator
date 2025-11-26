@@ -1,0 +1,194 @@
+{
+  "date": "2025-11-26 15:03:24",
+  "type": "abris_ouverts",
+  "total_fichiers": 224,
+  "largeurs_totales": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    12
+  ],
+  "profondeurs_totales": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "variantes": [
+    "normal",
+    "bosque"
+  ],
+  "traitements": [
+    "Galvanized",
+    "Powder coated"
+  ],
+  "versions": [
+    "Standard",
+    "PLUS"
+  ],
+  "fichiers": [
+    {
+      "fichier": "BOS-4M-N-400-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-P-400-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-N-400-PT.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "normal",
+      "treatment": "Powder coated",
+      "version": "Standard",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-P-400-PT.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "normal",
+      "treatment": "Powder coated",
+      "version": "PLUS",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-N-400-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "bosque",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-P-400-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "bosque",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-N-400-PT.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "bosque",
+      "treatment": "Powder coated",
+      "version": "Standard",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-P-400-PT.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "bosque",
+      "treatment": "Powder coated",
+      "version": "PLUS",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-N-500-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 5,
+      "profondeurs_decomposees": [
+        2.53,
+        2.53
+      ],
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "ouvert"
+    },
+    {
+      "fichier": "BOS-4M-P-500-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 5,
+      "profondeurs_decomposees": [
+        2.53,
+        2.53
+      ],
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "ouvert"
+    }
+  ]
+}

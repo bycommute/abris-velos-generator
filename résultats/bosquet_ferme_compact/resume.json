@@ -1,0 +1,147 @@
+{
+  "date": "2025-11-26 15:52:56",
+  "type": "bosquet_ferme_compact",
+  "total_fichiers": 40,
+  "largeurs_totales": [
+    2,
+    2.5,
+    4,
+    5,
+    6
+  ],
+  "profondeur_fixe": 2.5,
+  "variantes": [
+    "normal",
+    "bosque"
+  ],
+  "traitements": [
+    "Galvanized",
+    "Powder coated"
+  ],
+  "versions": [
+    "Standard",
+    "PLUS"
+  ],
+  "fichiers": [
+    {
+      "fichier": "BOS-F-COMPACT-2M-N-250-G.xlsx",
+      "largeur_totale": 2,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.03,
+      "amount": 1,
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2M-P-250-G.xlsx",
+      "largeur_totale": 2,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.03,
+      "amount": 1,
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2M-N-250-PT.xlsx",
+      "largeur_totale": 2,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.03,
+      "amount": 1,
+      "variante": "normal",
+      "treatment": "Powder coated",
+      "version": "Standard",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2M-P-250-PT.xlsx",
+      "largeur_totale": 2,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.03,
+      "amount": 1,
+      "variante": "normal",
+      "treatment": "Powder coated",
+      "version": "PLUS",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2M-N-250-G.xlsx",
+      "largeur_totale": 2,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.03,
+      "amount": 1,
+      "variante": "bosque",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2M-P-250-G.xlsx",
+      "largeur_totale": 2,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.03,
+      "amount": 1,
+      "variante": "bosque",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2M-N-250-PT.xlsx",
+      "largeur_totale": 2,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.03,
+      "amount": 1,
+      "variante": "bosque",
+      "treatment": "Powder coated",
+      "version": "Standard",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2M-P-250-PT.xlsx",
+      "largeur_totale": 2,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.03,
+      "amount": 1,
+      "variante": "bosque",
+      "treatment": "Powder coated",
+      "version": "PLUS",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2.5M-N-250-G.xlsx",
+      "largeur_totale": 2.5,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.53,
+      "amount": 1,
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "bosquet_ferme_compact"
+    },
+    {
+      "fichier": "BOS-F-COMPACT-2.5M-P-250-G.xlsx",
+      "largeur_totale": 2.5,
+      "profondeur_totale": 2.5,
+      "entrance_type": "Double swing gate",
+      "segment_size": 2.53,
+      "amount": 1,
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "bosquet_ferme_compact"
+    }
+  ]
+}

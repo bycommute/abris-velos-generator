@@ -1,0 +1,127 @@
+{
+  "date": "2025-11-26 15:45:42",
+  "type": "metallique_ferme",
+  "total_fichiers": 200,
+  "largeurs_totales": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "profondeurs_totales": [
+    4,
+    4.5,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "variantes": [
+    "metallique"
+  ],
+  "traitements": [
+    "Galvanized",
+    "Powder coated"
+  ],
+  "versions": [
+    "Standard",
+    "PLUS"
+  ],
+  "fichiers": [
+    {
+      "fichier": "MET-F-4M-N-400-G.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 4,
+      "variante": "metallique",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-P-400-G.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 4,
+      "variante": "metallique",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-N-400-PT.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 4,
+      "variante": "metallique",
+      "treatment": "Powder coated",
+      "version": "Standard",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-P-400-PT.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 4,
+      "variante": "metallique",
+      "treatment": "Powder coated",
+      "version": "PLUS",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-N-450-G.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 4.5,
+      "variante": "metallique",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-P-450-G.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 4.5,
+      "variante": "metallique",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-N-450-PT.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 4.5,
+      "variante": "metallique",
+      "treatment": "Powder coated",
+      "version": "Standard",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-P-450-PT.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 4.5,
+      "variante": "metallique",
+      "treatment": "Powder coated",
+      "version": "PLUS",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-N-500-G.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 5,
+      "variante": "metallique",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "metallique_ferme"
+    },
+    {
+      "fichier": "MET-F-4M-P-500-G.xlsx",
+      "largeur_totale": 4,
+      "profondeur_totale": 5,
+      "variante": "metallique",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "metallique_ferme"
+    }
+  ]
+}

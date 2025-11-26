@@ -1,0 +1,21 @@
+COMMANDES À EXÉCUTER DANS LE TERMINAL
+=====================================
+
+Copiez-collez ces commandes une par une dans votre terminal :
+
+cd "/Users/quentinpro/Desktop/ByCommute - Code/Test"
+
+git add site-web/netlify.toml site-web/INSTRUCTIONS_NETLIFY.md
+
+git commit -m "Correction configuration Netlify - Base directory et build settings"
+
+git push origin main
+
+=====================================
+OU UTILISEZ LE SCRIPT PYTHON :
+=====================================
+
+python3 push_github.py
+
+
+

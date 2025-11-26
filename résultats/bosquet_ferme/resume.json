@@ -1,0 +1,198 @@
+{
+  "date": "2025-11-26 15:29:15",
+  "type": "abris_fermes",
+  "total_fichiers": 400,
+  "largeurs_totales": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "profondeurs_totales": [
+    4,
+    4.5,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "variantes": [
+    "normal",
+    "bosque"
+  ],
+  "traitements": [
+    "Galvanized",
+    "Powder coated"
+  ],
+  "versions": [
+    "Standard",
+    "PLUS"
+  ],
+  "fichiers": [
+    {
+      "fichier": "BOS-F-4M-N-400-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-P-400-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-N-400-PT.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "normal",
+      "treatment": "Powder coated",
+      "version": "Standard",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-P-400-PT.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "normal",
+      "treatment": "Powder coated",
+      "version": "PLUS",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-N-400-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "bosque",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-P-400-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "bosque",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-N-400-PT.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "bosque",
+      "treatment": "Powder coated",
+      "version": "Standard",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-P-400-PT.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4,
+      "profondeurs_decomposees": [
+        2.03,
+        2.03
+      ],
+      "variante": "bosque",
+      "treatment": "Powder coated",
+      "version": "PLUS",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-N-450-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4.5,
+      "profondeurs_decomposees": [
+        2.03,
+        2.53
+      ],
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "Standard",
+      "type": "ferme"
+    },
+    {
+      "fichier": "BOS-F-4M-P-450-G.xlsx",
+      "largeur_totale": 4,
+      "largeurs_decomposees": [
+        4.06
+      ],
+      "profondeur_totale": 4.5,
+      "profondeurs_decomposees": [
+        2.03,
+        2.53
+      ],
+      "variante": "normal",
+      "treatment": "Galvanized",
+      "version": "PLUS",
+      "type": "ferme"
+    }
+  ]
+}
