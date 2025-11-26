@@ -1,6 +1,6 @@
 [build]
   base = "site-web"
-  command = "npm install && npm run build"
+  command = "cd site-web && npm install && npm run build"
   publish = "site-web/dist"
 
 [[redirects]]
@@ -9,6 +9,6 @@
   status = 200
 
 [functions]
-  directory = "netlify/functions"
+  directory = "site-web/netlify/functions"
   node_bundle = true
 
