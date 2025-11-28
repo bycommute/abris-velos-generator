@@ -233,6 +233,13 @@ for largeur_totale in largeurs_totales:
                     wb = openpyxl.load_workbook(work_file, data_only=False)
                     ws = wb['Configure']
                     
+                    # Nettoyer les lignes 29-31 (supprimer les espaces, mettre à None)
+                    for row in range(29, 32):
+                        for col in range(1, 4):  # Colonnes A, B, C
+                            cell_value = ws.cell(row, col).value
+                            if cell_value == ' ' or (isinstance(cell_value, str) and cell_value.strip() == ''):
+                                ws.cell(row, col).value = None
+                    
                     # Mettre "*" dans toutes les cellules de dimensions
                     for row in range(2, 14):
                         ws.cell(row, 1).value = "*"
@@ -320,8 +327,8 @@ print(f"   Traitements: {len(traitements)}")
 print(f"   Versions: {len(versions)}")
 print(f"   Total: {len(largeurs_totales)} × {len(profondeurs_totales)} × {len(variantes)} × {len(traitements)} × {len(versions)} = {len(fichiers_crees)} fichiers")
 
-print(f"\n💡 Instructions:")
-print(f"   1. Ouvrez chaque fichier dans Excel")
-print(f"   2. Appuyez sur F9 pour recalculer")
-print(f"   3. Fermez Excel")
-print(f"   4. Utilisez read_results.py pour lire les prix")
+print(f"\n💡 Prochaines étapes:")
+print(f"   Utilisez calculateur_prix_camflex.py pour :")
+print(f"   1. Calculer automatiquement les formules Excel")
+print(f"   2. Extraire les prix et composants")
+print(f"   3. Générer le fichier final resultats_tous.json")

@@ -127,6 +127,13 @@ for largeur_totale in largeurs_totales:
                 wb = openpyxl.load_workbook(work_file, data_only=False)
                 ws = wb['Configure']
                 
+                # Nettoyer les lignes 29-31 (supprimer les espaces, mettre à None)
+                for row in range(29, 32):
+                    for col in range(1, 4):  # Colonnes A, B, C
+                        cell_value = ws.cell(row, col).value
+                        if cell_value == ' ' or (isinstance(cell_value, str) and cell_value.strip() == ''):
+                            ws.cell(row, col).value = None
+                
                 # Mettre "*" dans toutes les cellules de dimensions
                 for row in range(2, 14):
                     ws.cell(row, 1).value = "*"
@@ -162,13 +169,10 @@ for largeur_totale in largeurs_totales:
                 
                 # Configuration des portes
                 ws.cell(28, 1).value = entrance_type  # A28 = entrance type
-                ws.cell(28, 2).value = segment_size  # B28 = segment size
+                ws.cell(28, 2).value = segment_size  # B28 = segment size (2.03 ou 2.53 selon largeur)
                 ws.cell(28, 3).value = amount  # C28 = amount
                 
-                # Gate hardware kit - toujours Euro cylinder lock pour les fermés
-                ws.cell(33, 1).value = 'Euro cylinder lock'  # A33
-                
-                # NE PAS TOUCHER B26 et B27 - ils ne doivent pas être modifiés
+                # NE PAS TOUCHER A33, B26 et B27 - ils sont pré-configurés dans le fichier de base
                 
                 # Sauvegarder
                 wb.save(work_file)
@@ -217,9 +221,9 @@ print(f"   Traitements: {len(traitements)}")
 print(f"   Versions: {len(versions)}")
 print(f"   Total: {len(largeurs_totales)} × {len(variantes)} × {len(traitements)} × {len(versions)} = {len(fichiers_crees)} fichiers")
 
-print(f"\n💡 Instructions:")
-print(f"   1. Ouvrez chaque fichier dans Excel")
-print(f"   2. Appuyez sur F9 pour recalculer")
-print(f"   3. Fermez Excel")
-print(f"   4. Utilisez read_results.py pour lire les prix")
+print(f"\n💡 Prochaines étapes:")
+print(f"   Utilisez calculateur_prix_camflex.py pour :")
+print(f"   1. Calculer automatiquement les formules Excel")
+print(f"   2. Extraire les prix et composants")
+print(f"   3. Générer le fichier final resultats_tous.json")
 

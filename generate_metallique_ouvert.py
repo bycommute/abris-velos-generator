@@ -3,7 +3,7 @@
 """
 Génère les fichiers Excel pour les abris MÉTALLIQUES OUVERTS
 - B19 = "2D mesh" (wall material)
-- B20 = "RAV716" (mesh finish)
+- B20 = "RAL7016" (mesh finish)
 - Murs : haut, droite, gauche (pas en bas) - OUVERT
 - Pas de portes
 - Remove cladding : No (B25 = No)
@@ -28,44 +28,23 @@ versions = ['Standard', 'PLUS']
 
 # Variantes - Pour Métallique, remove_cladding = No
 variantes = [
-    {'nom': 'metallique', 'wall_material': '2D mesh', 'mesh_finish': 'RAV716', 'remove_cladding': 'No'}
+    {'nom': 'metallique', 'wall_material': '2D mesh', 'mesh_finish': 'RAL7016', 'remove_cladding': 'No'}
 ]
 
 # Fonction pour décomposer la profondeur en valeurs valides (2m, 2.5m)
+# Pour les ouverts, la profondeur est toujours soit 2m soit 2.5m (pas de décomposition)
 def decomposer_profondeur(profondeur_totale):
     """
-    Décompose une profondeur totale en valeurs valides (2.03m, 2.53m)
-    Retourne une liste de valeurs à mettre dans A2, A3, A4, etc.
+    Pour les ouverts, la profondeur est directement 2.03m ou 2.53m
+    Retourne une liste avec une seule valeur
     """
-    if profondeur_totale == 4:
-        return [2.03, 2.03]
-    elif profondeur_totale == 4.5:
-        return [2.03, 2.53]
-    elif profondeur_totale == 5:
-        return [2.53, 2.53]
-    elif profondeur_totale == 6:
-        return [2.03, 2.03, 2.03]
-    elif profondeur_totale == 6.5:
-        return [2.03, 2.03, 2.53]
-    elif profondeur_totale == 7:
-        return [2.03, 2.53, 2.53]
+    if profondeur_totale == 2:
+        return [2.03]
+    elif profondeur_totale == 2.5:
+        return [2.53]
     else:
-        valeurs_valides = [2.03, 2.53]
-        resultat = []
-        reste = profondeur_totale
-        
-        while reste > 0.1:
-            if reste >= 2.53:
-                resultat.append(2.53)
-                reste -= 2.53
-            elif reste >= 2.03:
-                resultat.append(2.03)
-                reste -= 2.03
-            else:
-                resultat.append(2.03)
-                reste = 0
-        
-        return resultat
+        # Par défaut, utiliser 2.03m
+        return [2.03]
 
 # Fonction pour décomposer la largeur en valeurs valides
 def decomposer_largeur(largeur_totale):
@@ -118,8 +97,9 @@ def decomposer_largeur(largeur_totale):
         return resultat
 
 # Largeurs et profondeurs pour les ouverts
+# Les ouverts n'ont que 2m et 2.5m de profondeur
 largeurs_totales = [2, 2.5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-profondeurs_totales = [4, 4.5, 5, 6, 6.5, 7]
+profondeurs_totales = [2, 2.5]  # Seulement 2m et 2.5m pour les ouverts
 
 print("=" * 80)
 print("GÉNÉRATION DES ABRIS MÉTALLIQUES OUVERTS")
@@ -190,6 +170,14 @@ for largeur_totale in largeurs_totales:
                     wb = openpyxl.load_workbook(work_file, data_only=False)
                     ws = wb['Configure']
                     
+                    # Nettoyer les lignes 28-31 (supprimer les espaces, zéros et valeurs, mettre à None pour les ouverts)
+                    for row in range(28, 32):
+                        for col in range(1, 4):  # Colonnes A, B, C
+                            cell_value = ws.cell(row, col).value
+                            # Pour les ouverts, toutes les cellules doivent être vides
+                            if cell_value is not None:
+                                ws.cell(row, col).value = None
+                    
                     # Mettre "*" dans toutes les cellules de dimensions
                     for row in range(2, 14):
                         ws.cell(row, 1).value = "*"
@@ -210,17 +198,25 @@ for largeur_totale in largeurs_totales:
                     
                     # Configuration MÉTALLIQUE OUVERT
                     ws.cell(19, 2).value = variante['wall_material']  # B19 = "2D mesh"
-                    ws.cell(20, 2).value = variante['mesh_finish']  # B20 = "RAV716"
+                    ws.cell(20, 2).value = variante['mesh_finish']  # B20 = "RAL7016"
                     ws.cell(21, 2).value = 'Yes'  # B21 = top wall
                     ws.cell(22, 2).value = 'Yes'  # B22 = right wall
                     ws.cell(23, 2).value = 'No'  # B23 = bottom wall (OUVERT)
                     ws.cell(24, 2).value = 'Yes'  # B24 = left wall
                     ws.cell(25, 2).value = 'No'  # B25 = remove cladding
                     
-                    # Pas de portes pour les ouverts
-                    ws.cell(28, 1).value = None  # A28 = entrance type (vide)
-                    ws.cell(28, 2).value = 0
-                    ws.cell(28, 3).value = 0
+                    # Pas de portes pour les ouverts - Les lignes 28-31 sont déjà nettoyées (None)
+                    # A28, B28, C28, A29, B29, C29, A30, B30, C30, A31, B31, C31 = None (vides)
+                    
+                    # Nettoyer A33 et B33 (cellules fusionnées) - doivent être vides pour les ouverts
+                    # Démerger si nécessaire, puis vider
+                    merged_ranges = list(ws.merged_cells.ranges)
+                    for merged_range in merged_ranges:
+                        if merged_range.min_row == 33 and merged_range.min_col <= 2 and merged_range.max_col >= 2:
+                            ws.unmerge_cells(str(merged_range))
+                            break
+                    ws.cell(33, 1).value = None  # A33
+                    ws.cell(33, 2).value = None  # B33
                     
                     # NE PAS TOUCHER B26 et B27 - ils ne doivent pas être modifiés
                     

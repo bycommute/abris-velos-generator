@@ -3,7 +3,7 @@
 """
 Génère les fichiers Excel pour les abris MÉTALLIQUES FERMÉS COMPACT
 - B19 = "2D mesh" (wall material)
-- B20 = "RAV716" (mesh finish)
+- B20 = "RAL7016" (mesh finish)
 - Profondeur : toujours 2.5m
 - Largeurs : 2m, 2.5m, 4m, 5m, 6m
 - Murs : partout (haut, droite, bas, gauche) - FERMÉ
@@ -29,7 +29,7 @@ versions = ['Standard', 'PLUS']
 
 # Variantes - Pour Métallique, remove_cladding = No
 variantes = [
-    {'nom': 'metallique', 'wall_material': '2D mesh', 'mesh_finish': 'RAV716', 'remove_cladding': 'No'}
+    {'nom': 'metallique', 'wall_material': '2D mesh', 'mesh_finish': 'RAL7016', 'remove_cladding': 'No'}
 ]
 
 # Largeurs pour compact
@@ -122,6 +122,13 @@ for largeur_totale in largeurs_totales:
                 wb = openpyxl.load_workbook(work_file, data_only=False)
                 ws = wb['Configure']
                 
+                # Nettoyer les lignes 29-31 (supprimer les espaces, mettre à None)
+                for row in range(29, 32):
+                    for col in range(1, 4):  # Colonnes A, B, C
+                        cell_value = ws.cell(row, col).value
+                        if cell_value == ' ' or (isinstance(cell_value, str) and cell_value.strip() == ''):
+                            ws.cell(row, col).value = None
+                
                 # Mettre "*" dans toutes les cellules de dimensions
                 for row in range(2, 14):
                     ws.cell(row, 1).value = "*"
@@ -149,7 +156,7 @@ for largeur_totale in largeurs_totales:
                 
                 # Configuration MÉTALLIQUE FERMÉ COMPACT
                 ws.cell(19, 2).value = variante['wall_material']  # B19 = "2D mesh"
-                ws.cell(20, 2).value = variante['mesh_finish']  # B20 = "RAV716"
+                ws.cell(20, 2).value = variante['mesh_finish']  # B20 = "RAL7016"
                 ws.cell(21, 2).value = 'Yes'  # B21 = top wall
                 ws.cell(22, 2).value = 'Yes'  # B22 = right wall
                 ws.cell(23, 2).value = 'Yes'  # B23 = bottom wall (FERMÉ)
@@ -158,13 +165,10 @@ for largeur_totale in largeurs_totales:
                 
                 # Configuration des portes
                 ws.cell(28, 1).value = entrance_type  # A28 = entrance type
-                ws.cell(28, 2).value = segment_size  # B28 = segment size
+                ws.cell(28, 2).value = segment_size  # B28 = segment size (2.03 ou 2.53 selon largeur)
                 ws.cell(28, 3).value = amount  # C28 = amount
                 
-                # Gate hardware kit - toujours Euro cylinder lock pour les fermés
-                ws.cell(33, 1).value = 'Euro cylinder lock'  # A33
-                
-                # NE PAS TOUCHER B26 et B27 - ils ne doivent pas être modifiés
+                # NE PAS TOUCHER A33, B26 et B27 - ils sont pré-configurés dans le fichier de base
                 
                 # Sauvegarder
                 wb.save(work_file)
